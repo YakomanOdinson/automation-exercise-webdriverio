@@ -4,3 +4,4 @@ allure-results
 video-report
 data
 package-lock.json
+.idea
