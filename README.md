@@ -1,11 +1,11 @@
 # automation-exercise-webdriverio
 * [Introduction](#introduction)
 * [Tools](#tools)
-* [Test Approach](#test approach)
-* [Automation Approach](#automation approach)
+* [Test Approach](#testapproach)
+* [Automation Approach](#automationapproach)
 * [Installation](#installation)
 * [Usage](#usage)
-* [More Links](#more links)
+* [More Links](#morelinks)
 
 ## Introduction
 The goal of this repository is to help as a reference on how to approach a testing project focusing more on automation but also give insight on the test approach in general to give the reader more context.
@@ -51,12 +51,12 @@ This may slow down the execution while trying to meet the preconditions so havin
 
 Next some examples of the possible scenarios for the UI pages:
 
-###Navigation bar
+### Navigation bar
 * Check the different links take you to the expected page(one test case for each link)
 * For not logged in user "Logged as ${name}" should not be there
 * For logged in users "Logged as ${name}" should be there
 
-###Home page
+### Home page
 * Validate the changing add section (Would need to know the content that is supposed to be displaying)
 * Validate Recommended items section (Would need to know how the content displayed there is determined)
 * Browse for specific product
@@ -64,7 +64,7 @@ Next some examples of the possible scenarios for the UI pages:
 * Browser products filtering by brands (will end up taking the user to products page with the filter results)
 * View product details (will end up taking the user to products page)
 
-###Products Page
+### Products Page
 * Search valid product with search field
 * Search invalid product with search field
 * Search product with filter by category
@@ -83,25 +83,25 @@ Next some examples of the possible scenarios for the UI pages:
 * View product details - leave a review - miss one input field
 * View product details - leave a review - all fields
 
-###Cart Page
+### Cart Page
 * Validate cart items are the expected
 * Remove item
 * Proceed to Checkout - No user logged in - Continue on Cart
 * Proceed to Checkout - No user logged in - Register/Login
 * Proceed to Checkout - Logged in user - Register/Login
 
-###Checkout Page
+### Checkout Page
 * Validate order items are the expected
 * Place order with comment
 * Place order without comment
 
-###Payment Page
+### Payment Page
 * Try to submit - without input
 * Try to submit - with card name only
 * Try to submit - with card name only
 
-##Automation Approach
-###Scope
+## Automation Approach
+### Scope
 As mentioned above, many test cases can be defined for the application under test but to keep it simple only one E2E flow will be covered which has multiple flows in it:
 
 1. Enter the website and scroll down about halfway down the page.
@@ -125,7 +125,7 @@ As mentioned above, many test cases can be defined for the application under tes
 19. Press “OK” in the pop up
 20. Finally, click on the “Logout” button on the header.
 
-###Implementation
+### Implementation
 The page object model approach will be used. A page.js file will be created for each page of the UI with xpaths of the elements to use and methods to the actions that can be done in that page.
 There could be common actions amongst the pages. That functionality will be in base.page.js file and the other page files will extend from it so, it is defined once but available wherever is needed.
 
@@ -140,7 +140,7 @@ There are scenarios where the same steps are done just with different data (e.g.
 This can also help if there are multiple environments for the application (which is pretty common)
 This can be a future enhancement for the project
 
-###Reports
+### Reports
 Apart from the default spec report (which only gives you a summary in console of the execution), Allure report is used in the project. 
 This will save the information of the execution on a folder called allure-results. 
 Using the allure commandline tool, a html report can be generated out of the information from the allure-results folder. 
