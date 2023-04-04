@@ -1,11 +1,11 @@
 # automation-exercise-webdriverio
 * [Introduction](#introduction)
 * [Tools](#tools)
-* [Test Approach](#testapproach)
-* [Automation Approach](#automationapproach)
+* [Test Approach](#test-approach)
+* [Automation Approach](#automation-approach)
 * [Installation](#installation)
 * [Usage](#usage)
-* [More Links](#morelinks)
+* [More Links](#more-links)
 
 ## Introduction
 The goal of this repository is to help as a reference on how to approach a testing project focusing more on automation but also give insight on the test approach in general to give the reader more context.
